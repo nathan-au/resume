@@ -1,96 +1,109 @@
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
 
 \usepackage{hyperref}
 \hypersetup{
-    colorlinks = true,      % links are colored, no boxes
+    colorlinks = true,
     urlcolor = black
 }
-\usepackage[left = 0.5in, right = 0.5in, top = 0.5in, bottom = 0.5in]{geometry}
+\usepackage[
+    left = 0.25in, 
+    right = 0.25in, 
+    top = 0.25in, 
+    bottom = 0.25in
+]{geometry}
 \usepackage{enumitem}
-\setlist[itemize]{topsep = 0.1em, itemsep = 0em, parsep = 0em, partopsep = 0em}
-
+\setlist[itemize]{
+    topsep = 0.1em, 
+    itemsep = 0em, 
+    parsep = 0em, 
+    partopsep = 0em
+}
 \usepackage{titlesec}
-\titlespacing*{\section}{0em}{0.1em}{0em}
+\titlespacing*{\section}{0em}{0.2em}{0em}
+\usepackage{changepage}
 
 \begin{document}
-\pagestyle{empty}
-\begin{center}
-    \textbf{\Large Nathan Au}\\[0.4em]
-    Montr\'{e}al, Canada 
-    $\bullet$
-    613-899-8737 
-    $\bullet$
-    \href{im.nathanau@gmail.com}{\underline{im.nathanau@gmail.com}} 
-    $\bullet$ 
-    \href{https://www.linkedin.com/in/-nathanau/}{\underline{/in/-nathanau}}
-    $\bullet$ 
-    \href{https://nathan-au.github.io/}{\underline{nathan-au.github.io}}
-\end{center}
 
+    \pagestyle{empty}
 
-\section*{\large Education}
-\hrule 
-\vspace{0.4em}
-\textbf{Concordia University} \hfill Montr\'{e}al, Quebec\\
-Bachelor of Engineering, Software Engineering, Co-op \hfill 2024 -- Present
-\begin{itemize}
-    \item GPA: 3.3/4.0
-\end{itemize}
-\textbf{West Carleton Secondary School} \hfill Ottawa, Ontario\\
-OSSD, Information and Communications Technology SHSM, Co-op \hfill 2020 -- 2024
+    \begin{center}
+        \textbf{\LARGE Nathan Au}\\[0.4em]
+        Montr\'{e}al, QC, Canada 
+        $\bullet$
+        \href{im.nathanau@gmail.com}{\underline{im.nathanau@gmail.com}} 
+        $\bullet$ 
+        \href{https://nathan-au.github.io}{\underline{nathan-au.github.io}}
+        $\bullet$ 
+        \href{https://www.linkedin.com/in/-nathanau}{\underline{/in/-nathanau}}
+    \end{center}
 
-\section*{\large Experience}
-\hrule 
-\vspace{0.4em}
-\textbf{Mobile Developer} \hfill Nov. 2024 -- Apr. 2025\\
-Google Developer Group on Campus Concordia University \hfill Hybrid / Montr\'{e}al, Quebec
-\begin{itemize}
-    \item Built Amicae, a cross-platform Flutter app that helps university students make connections, find study spots, and stay updated on campus events.
-    \item Earned recognition at the project showcase for: Best UI/UX, Best Presentation, and 2nd Place Overall.
-    \item Worked with 4 other developers to complete the project goals.
-\end{itemize}
-\textbf{Engineering Intern} \hfill Sep. 2023 -- Feb. 2024\\
-Renaissance Network Reinvent \hfill Ottawa, Ontario
-\begin{itemize}
-    \item Designed and implemented functionality tests for computer systems and network hardware.
-    \item Worked across various teams to debug and resolve performance issues.
-    \item Optimized inventory tracking and data management systems for import/export logistics.
-\end{itemize}
+    \vspace{-1.0em}
 
-\section*{\large Projects}
-\hrule 
-\vspace{0.4em}
-\textbf{PartCart} $\vert$ Vue.js, Supabase, TailwindCSS
-\begin{itemize}
-    \item Web application designed for internal use at computer repair companies to manage the workflow of part requests from technicians to buyers.
-    \item Implementation of part requests dashboard for technicians, approval dashboard for buyers, sorting \& filtering by order details, and role-based authentication.
-\end{itemize}
-\textbf{Amicae} $\vert$ Flutter, Firebase, Vertex AI, Dart
-\begin{itemize}
-    \item Mobile app designed to help students at Concordia University connect with potential study buddies, discover study spots, and stay updated on university events.
-    \item Integrated Amicae Matchup AI for personalized study buddy recommendations using Vertex AI and developed multi-screen UI/UX for various app use cases.
-    \item Used Firebase for core back-end services and fetched from Concordia Open Data API.
-\end{itemize}
-\textbf{West Carleton Grad System} $\vert$ {HTML, CSS, JavaScript, PHP, SQL}
-\begin{itemize}
-    \item Full-stack web application designed to streamline the creation and management of slideshows for graduation ceremonies.
-    \item Centralized dashboard to input, edit, bulk import student and bulk-upload photos with automatic resizing and assignment.
-    \item Integrated tools such as Google OAuth 2.0, WYSIWYG editor and Bootstrap framework to ensure good UX.
-\end{itemize}
+    \section*{\large Education}
+    \hrule 
+    \vspace{0.4em}
+    \begin{adjustwidth}{0.125in}{0in}
+        \textbf{Concordia University} \hfill Montr\'{e}al, QC\\
+        Bachelor of Engineering -- Software Engineering, Co-op \hfill 2024 -- 2028 (expected)
+        \begin{itemize}
+            \item GPA: 3.3/4.0
+        \end{itemize}
+        \textbf{West Carleton Secondary School} \hfill Ottawa, ON\\
+        OSSD, Information and Communications Technology SHSM, Co-op \hfill 2020 -- 2024
+    \end{adjustwidth}
 
+    \section*{\large Experience}
+    \hrule 
+    \vspace{0.4em}
+    \begin{adjustwidth}{0.125in}{0in}
+        \textbf{Mobile Application Developer} \hfill Nov. 2024 -- Apr. 2025\\
+        Google Developer Group on Campus Concordia University \hfill Hybrid / Montr\'{e}al, QC
+        \begin{itemize}
+            \item Collaborated in a 4-person team to plan, design, and develop Amicae, an app connecting students with peers, study spots, and events (\textit{see Projects}).
+            \item Applied Agile methodology through 2-week Scrum sprints to prioritize high-impact tasks, develop features iteratively, and incorporate user and mentor feedback. 
+            \item Produced the official launch video to highlight core functionality and pitched the app at Flutter Montr\'{e}al and Concordia University to 100+ students and professionals.
+            \item Earned team recognition for Best UI/UX, Best Presentation, and 2nd Place Winning Team.
+        \end{itemize}
+        \textbf{Engineering Intern -- Hardware \& Electronics} \hfill Sep. 2023 -- Feb. 2024\\
+        Renaissance Network Reinvent \hfill Ottawa, ON
+        \begin{itemize}
+            \item Engaged in the full product repair cycle: testing $\rightarrow$ debugging $\rightarrow$ repair $\rightarrow$ assembly $\rightarrow$ quality control, while adhering to ESD safety protocols.
+            \item Debugged and repaired 200+ units (e.g., circuit boards, server fans, power supplies) using electronic test instruments and component-level soldering techniques.
+            \item Reduced material costs by salvaging 75+ microchips and various electronic components from unrepairable circuit boards.
+            \item Tracked inventory of 1,000+ repair components using barcode-enabled data capture and Excel-driven tracking.
+        \end{itemize}
+    \end{adjustwidth}
 
+    \section*{\large Projects \hfill \small{More projects: \href{https://nathan-au.github.io/\#projects}{nathan-au.github.io}}}
+    \hrule 
+    \vspace{0.4em}
+    \begin{adjustwidth}{0.125in}{0in}
+        \textbf{Reel Digest} $\vert$ Python, Ollama, SQLite, Telegram Bot API, yt-dlp \hfill Dec. 2025\\
+        Messaging-based productivity service that processes short-form content and generates concise text summaries. 
+        \begin{itemize}
+            \item Designed an audiovisual media processing pipeline: URL validation $\rightarrow$ video download (yt-dlp) $\rightarrow$ audio extraction $\rightarrow$ speech transcription (Google Speech Recognition) $\rightarrow$ LLM-based summarization (Ollama) $\rightarrow$ persistent storage (SQLite).
+            \item Built a relational persistence layer to track users, content outputs, and junctions to enable history tracking and prevent duplicate data processing.
+        \end{itemize}
+        \textbf{RPG-Mini} $\vert$ Python, FastAPI, Ollama, SQLite, SQLModel, Pytest, Pytesseract \hfill Oct. 2025\\
+        End-to-end API framework that automates document intake, classification, and data extraction for tax accounting workflows.
+        \begin{itemize}
+            \item Engineered a two-layer document classification algorithm with optical character recognition (PyMyPDF + Pytesseract) and keyword-based matching to identify known document types.
+            \item Integrated LLM-powered data field extraction to transform unstructured OCR text into machine-readable JSON.
+        \end{itemize}
+        \textbf{Amicae} $\vert$ Flutter, Dart, Firebase, Vertex AI \hfill Apr. 2025\\
+        Mobile app that helps Concordia students make connections, explore study spots, and stay up to date on campus events.
+        \begin{itemize}
+            \item Implemented Amicae Matchup AI for personalized, data-driven match recommendations with Gemini LLM integration from Vertex AI.
+            \item Automated the delivery of upcoming campus events and study spots in real time with the Concordia Open Data API and flutter\_map geolocation services.
+        \end{itemize}
+    \end{adjustwidth}
 
-
-
-\section*{\large Technical Skills}
-\hrule 
-\vspace{0.4em}
-% \textbf{Languages}: Python, HTML, CSS, JavaScript, PHP, C++, Java, Dart, Swift, SQL\\
-% \textbf{Libraries \& Frameworks}: Flutter, SwiftUI, Pandas, NumPy, Vue.js, FastAPI, TailwindCSS, Playwright, Pytesseract, PyMuPDF, Matplotlib, jQuery, Bootstrap, SQLModel, SQLite, Pydantic, FinBERT, Reddit JSON API, yfinance, Google OAuth API, Concordia University API\\
-% \textbf{Tools}: Git \& GitHub, SolidWorks, KiCAD, Arduino, Firebase, Supabase, MySQL, Vertex AI, Ollama
-
-\textbf{Technical Skills}: Flutter, Vue.js, Python, C++, HTML, CSS, JavaScript, PHP, SQL, Dart, Java,\\
-\textbf{Applications}: SOLIDWORKS, KiCad, Arduino\\
-\textbf{Languages}: English (native proficiency), French (CECR DELF B2)
-
+    \section*{\large Technical Skills}
+    \hrule 
+    \vspace{0.4em}
+    \begin{adjustwidth}{0.125in}{0in}
+        \textbf{Languages}: Python, HTML, CSS, JavaScript, SQL, Dart, C++\\
+        \textbf{Libraries \& Frameworks}: Flutter, Vue.js, FastAPI, SQLite, TailwindCSS, SQLModel, Pandas, Matplotlib, Pytest\\
+        \textbf{Tools}: Git \& Github, Arduino, Ollama, Firebase, Supabase, Vertex AI, LaTeX, SolidWorks, KiCad
+    \end{adjustwidth}
 \end{document}
