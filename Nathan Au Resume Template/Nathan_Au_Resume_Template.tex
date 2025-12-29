@@ -1,0 +1,110 @@
+\documentclass[11pt]{article}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks = true,
+    urlcolor = black
+}
+\usepackage[
+    left = 0.25in, 
+    right = 0.25in, 
+    top = 0.25in, 
+    bottom = 0.25in
+]{geometry}
+\usepackage{enumitem}
+\setlist[itemize]{
+    topsep = 0.1em, 
+    itemsep = 0em, 
+    parsep = 0em, 
+    partopsep = 0em
+}
+\usepackage{titlesec}
+\titlespacing*{\section}{0em}{0.2em}{0em}
+\usepackage{changepage}
+
+\begin{document}
+
+    \pagestyle{empty}
+
+    \begin{center}
+        \textbf{\LARGE First Last}\\[0.4em]
+        City, Country
+        $\bullet$
+        \href{email@email.com}{\underline{email@email.com}} 
+        $\bullet$ 
+        \href{portfolio-website.com}{\underline{portfolio-website.com}}
+        $\bullet$ 
+        \href{https://www.linkedin.com}{\underline{/in/username}}
+    \end{center}
+
+    \vspace{-1.0em}
+
+    \section*{\large Education}
+    \hrule 
+    \vspace{0.4em}
+    \begin{adjustwidth}{0.125in}{0in}
+        \textbf{School} \hfill \textbf{City, Province}\\
+        Degree \hfill start -- end (expected)
+        \begin{itemize}
+            \item GPA: 
+        \end{itemize}
+        \textbf{School 2} \hfill \textbf{City, Province}\\
+        Degree \hfill start -- end
+    \end{adjustwidth}
+
+    \section*{\large Experience}
+    \hrule 
+    \vspace{0.4em}
+    \begin{adjustwidth}{0.125in}{0in}
+        \textbf{Position Title} \hfill \textbf{start -- end}\\
+        Company \hfill City, Province
+        \begin{itemize}
+            \item Bullet 1
+            \item Bullet 2
+            \item Bullet 3
+            \item Bullet 4
+        \end{itemize}
+        \textbf{Position Title 2} \hfill \textbf{start -- end}\\
+        Company 2\hfill City, Province
+        \begin{itemize}
+            \item Bullet 1
+            \item Bullet 2
+            \item Bullet 3
+            \item Bullet 4
+        \end{itemize}
+    \end{adjustwidth}
+
+    \section*{\large Projects}
+    \hrule 
+    \vspace{0.4em}
+    \begin{adjustwidth}{0.125in}{0in}
+        \textbf{Project Name 1} $\vert$ Tech 1, Tech 2, Tech 3 $\vert$ \href{https://github.com}{\underline{Source Code}} \hfill \textbf{end}\\
+        One-line project summary
+        \begin{itemize}
+            \item Bullet 1
+            \item Bullet 2
+        \end{itemize}
+        \textbf{Project Name 2} $\vert$ Tech 1, Tech 2, Tech 3 $\vert$ \href{https://github.com}{\underline{Source Code}} \hfill \textbf{end}\\
+        One-line project summary
+        \begin{itemize}
+            \item Bullet 1
+            \item Bullet 2
+        \end{itemize}
+        \textbf{Project Name 3} $\vert$ Tech 1, Tech 2, Tech 3 $\vert$ \href{https://github.com}{\underline{Source Code}} \hfill \textbf{end}\\
+        One-line project summary
+        \begin{itemize}
+            \item Bullet 1
+            \item Bullet 2
+        \end{itemize}
+        \textbf{More projects: \href{portfolio-website.com}{\underline{portfolio-website.com}}}
+    \end{adjustwidth}
+
+    \section*{\large Technical Skills}
+    \hrule 
+    \vspace{0.4em}
+    \begin{adjustwidth}{0.125in}{0in}
+        \textbf{Languages}: Language 1, Language 2, Language 3 \\
+        \textbf{Libraries \& Frameworks}: Library 1, Framework 1, Library 2, Framework 2, Library 3, Framework 3\\
+        \textbf{Tools}: Tool 1, Tool 2, Tool 3  
+    \end{adjustwidth}
+\end{document}
