@@ -14,13 +14,14 @@
 \usepackage{enumitem}
 \setlist[itemize]{
     topsep = 0.1em, 
-    itemsep = 0em, 
-    parsep = 0em, 
-    partopsep = 0em
+    itemsep = 0.0em, 
+    parsep = 0.0em, 
 }
 \usepackage{titlesec}
 \titlespacing*{\section}{0em}{0.2em}{0em}
 \usepackage{changepage}
+
+\pdfgentounicode=1 
 
 \begin{document}
 
@@ -44,33 +45,31 @@
     \vspace{0.4em}
     \begin{adjustwidth}{0.125in}{0in}
         \textbf{Concordia University} \hfill \textbf{Montr\'{e}al, QC}\\
-        Bachelor of Engineering -- Software Engineering, Co-op \hfill 2024 -- 2028 (expected)
+        Bachelor of Engineering -- Software Engineering, Co-op \hfill Sep. 2024 -- May 2028 (expected)
         \begin{itemize}
             \item GPA: 3.4/4.0
         \end{itemize}
-        \textbf{West Carleton Secondary School} \hfill \textbf{Ottawa, ON}\\
-        OSSD, Information and Communications Technology SHSM, Co-op \hfill 2020 -- 2024
     \end{adjustwidth}
 
     \section*{\large Experience}
     \hrule 
     \vspace{0.4em}
     \begin{adjustwidth}{0.125in}{0in}
-        \textbf{Mobile Application Developer} \hfill \textbf{Nov. 2024 -- Apr. 2025}\\
-        Google Developer Group on Campus Concordia University \hfill Hybrid / Montr\'{e}al, QC
+        \textbf{Software Developer -- Mobile \& AI Integration} \hfill \textbf{Nov. 2024 -- Apr. 2025}\\
+        Google Developer Group -- Concordia University \hfill Hybrid / Montr\'{e}al, QC
         \begin{itemize}
-            \item Earned team recognition for Best UI/UX, Best Presentation, and 2nd Place Winning Team.
-            \item Collaborated in a 4-person team to plan, design, and develop Amicae: an app connecting students with peers, study spots, and events (\textit{see Projects}).
-            \item Applied Agile methodology through 2-week Scrum sprints to prioritize high-impact tasks, develop features iteratively, and incorporate user feedback. 
-            \item Pitched the app at Flutter Montr\'{e}al and Concordia University to 100+ people and produced the official launch video to highlight core functionality. 
+            \item Developed a cross-platform Flutter mobile application that helps university students in Montr\'{e}al connect with peers, discover local study spots, and stay up to date on upcoming campus events all on one platform. 
+            \item Built a data-driven recommendation engine using user profiles managed in Firebase Realtime Database and Gemini LLM integration via Vertex AI to generate personalized connection suggestions based on shared interests and goals.
+            \item Integrated the Concordia University Open Data API to retrieve 60+ upcoming campus events in real-time and implemented responsive geolocation-based features using flutter\_map for interactive study spot discovery.
+            \item Delivered technical presentations at Flutter Montr\'{e}al and Concordia University to audiences of 100+ attendees and produced the official launch video to showcase system architecture and data flow.
         \end{itemize}
-        \textbf{Engineering Intern -- Hardware \& Electronics} \hfill \textbf{Sep. 2023 -- Feb. 2024}\\
+        \textbf{Systems Engineering Intern -- Hardware \& Operations} \hfill \textbf{Sep. 2023 -- Feb. 2024}\\
         Renaissance Network Reinvent \hfill Ottawa, ON
         \begin{itemize}
-            \item Reduced material costs by salvaging 75+ microchips and electronic components from unrepairable circuit boards.
-            \item Engaged in the full product repair cycle: testing, debugging, repair, assembly, quality control, while adhering to ESD safety protocols.
-            \item Debugged and repaired 200+ units (e.g., circuit boards, server fans, power supplies) using electronic test instruments and component-level soldering techniques.
-            \item Managed inventory of 1,000+ repair components using barcode-enabled data capture and Excel-driven tracking.
+            \item Performed system-level testing on satellite tracking units in FlightTest diagnostic software to ensure pre-deployment hardware-software sync and debugged 200+ electronic modules by validating I/O with test instrumentation.
+            \item Reduced material costs and improved repair efficiency by salvaging $\sim$100 high-value microchips and electronic components from scrap PCBs through component-level desoldering to enable parts reuse in future repairs.
+            \item Managed inventory of 1,000+ repair components using barcode-enabled data capture and Excel-driven tracking (Pivot Tables, XLOOKUP) to validate records and maintain data accuracy across repair logistics pipelines.
+            \item Executed end-to-end operational workflows (test, debug, repair, assembly, quality control) in collaboration with multiple cross-functional engineering teams to meet production deadlines.
         \end{itemize}
     \end{adjustwidth}
 
@@ -78,33 +77,34 @@
     \hrule 
     \vspace{0.4em}
     \begin{adjustwidth}{0.125in}{0in}
-        \textbf{Reel Digest} $\vert$ Python, Ollama, SQLite, Telegram Bot API, yt-dlp, SpeechRecognition $\vert$ \href{https://github.com/nathan-au/reel-digest}{\underline{Source Code}} \hfill \textbf{Dec. 2025}\\
-        Messaging-based productivity tool that saves users' time by processing short-form media into concise text summaries.
+        \textbf{Reel Digest} $\vert$ Python, Telegram Bot API, Ollama (Granite 4), SQLite, yt-dlp, OpenCV $\vert$ \href{https://github.com/nathan-au/reel-digest}{\underline{Source Code}} \hfill \textbf{Dec. 2025}\\
+        Messaging-based productivity tool that saves users' time by turning short-form content into concise text summaries.
         \begin{itemize}
-            \item Designed an audiovisual media processing pipeline: URL validation, video download (yt-dlp), audio extraction, speech transcription (GSR), LLM-based summarization (Ollama), and data storage (SQLite).
-            \item Built a relational persistence layer to track users, content outputs, and junctions to enable history tracking and prevent duplicate data processing.
+            \item Designed a multi-modal media processing pipeline with Google STT for audio transcription and OpenCV computer vision/Tesseract OCR optical character recognition for on-screen text extraction to enable contextual LLM analysis.
+            \item Configured a SQLite caching layer to eliminate redundant inference, persist user history, and successfully serve live summaries for 300+ unique production requests.
         \end{itemize}
-        \textbf{RPG-Mini} $\vert$ Python, FastAPI, Ollama, SQLite, SQLModel, pytest, Pytesseract $\vert$ \href{https://github.com/nathan-au/rpg-mini}{\underline{Source Code}} \hfill \textbf{Oct. 2025}\\
-        Automated document processing system to reduce repetitive tasks for tax accounting workflows.
+        \textbf{TeeFour AI} $\vert$ Python, FastAPI, Ollama (Gemma 3), SQLModel, Tesseract OCR, pytest $\vert$ \href{https://github.com/nathan-au/teefour-ai}{\underline{Source Code}} \hfill \textbf{Oct. 2025}\\
+        Automated tax document processing system that eliminates manual data entry for tax accounting workflows.
         \begin{itemize}
-            \item Engineered a two-layer document classification algorithm with optical character recognition (PyMyPDF + Pytesseract) and keyword-based matching to identify known document types.
-            \item Integrated LLM-powered data field extraction to transform unstructured OCR text into machine-readable JSON.
+            \item Engineered a two-layer document classification algorithm using PyMuPDF/Tesseract OCR to categorize known document types (T4s, IDs, receipts) via filename analysis and content-keyword matching logic.
+            \item Streamlined tax form data field extraction by integrating a locally hosted LLM to transform unstructured OCR text inputs into validated, machine-readable JSON outputs for downstream use in tax filing software.
         \end{itemize}
-        \textbf{Amicae} $\vert$ Flutter, Dart, Firebase, Vertex AI, flutter\_map, Concordia Open Data API $\vert$ \href{https://github.com/nathan-au/amicae}{\underline{Source Code}} \hfill \textbf{Apr. 2025}\\
-        Mobile app that helps Concordia students make connections, explore study spots, and stay up to date on campus events.
+        \textbf{PartCart} $\vert$ Vue.js, Supabase, Tailwind CSS, Vite, JavaScript $\vert$ \href{https://github.com/nathan-au/part-cart}{\underline{Source Code}} \hfill \textbf{May 2025}\\
+        Internal communication platform that simplifies the part procurement process for computer repair operations.
         \begin{itemize}
-            \item Implemented Amicae Matchup AI for personalized, data-driven match recommendations with Gemini LLM integration from Vertex AI.
-            \item Automated the delivery of upcoming campus events and study spots in real time with the Concordia Open Data API and flutter\_map geolocation services.
+            \item Architected a full-stack order management system using Vue.js and Supabase with role-based access control to support real-time communication between technicians (requesting) and buyers (approving/denying).
+            \item Constructed reactive dashboard interfaces with Supabase Realtime and Tailwind CSS to incorporate live order updates, form validation logic, order list sorting/filtering, priority-based colour indicators, and order detail modals.
         \end{itemize}
         \textbf{More projects: \href{https://nathan-au.github.io/\#projects}{\underline{nathan-au.github.io}}}
     \end{adjustwidth}
 
-    \section*{\large Technical Skills}
+    \section*{\large Relevant Skills}
     \hrule 
     \vspace{0.4em}
     \begin{adjustwidth}{0.125in}{0in}
-        \textbf{Languages}: Python, HTML, CSS, JavaScript, PHP, SQL, Dart, C++, Java\\
-        \textbf{Libraries \& Frameworks}: Flutter, Vue.js, FastAPI, SQLite, TailwindCSS, SQLModel, Pandas, Matplotlib, pytest\\
-        \textbf{Tools}: Git \& GitHub, Ollama, Firebase, Supabase, Vertex AI, LaTeX, Arduino, SolidWorks
+        \textbf{Technical Languages}: Python, TypeScript, JavaScript, SQL, Dart, HTML, CSS, C++, Java\\
+        \textbf{Frameworks \& Libraries}: FastAPI, Flutter, Vue.js, Next.js, Tailwind CSS, Pandas, Matplotlib, NumPy, pytest, Hugging Face Transformers, PyTorch \\
+        \textbf{Practices}: OOP, REST APIs, Agile/Scrum, Git Version Control, Unit \& E2E Testing, ETL Pipelines, LLMs, NLP\\
+        \textbf{Spoken Languages}: English (Native), French (Professional -- CECR DELF B2)
     \end{adjustwidth}
 \end{document}
