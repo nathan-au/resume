@@ -1,6 +1,6 @@
 \documentclass[11pt]{article}
 
-\usepackage{hyperref}
+\usepackage[bookmarks=false]{hyperref}
 \hypersetup{
     colorlinks = true,
     urlcolor = black
@@ -52,9 +52,10 @@
     \hrule 
     \vspace{0.4em}
     \begin{adjustwidth}{0.125in}{0in}
-        \textbf{Technical Languages}: Python, TypeScript, JavaScript, SQL, Dart, HTML, CSS, C++, Java\\
-        \textbf{Frameworks \& Libraries}: FastAPI, Flutter, React, Next.js, Pandas, Matplotlib, NumPy, Pytest, Hugging Face Transformers, OpenCV, Ultralytics YOLO, Google ADK, Pydantic, LangChain, LiveKit, Zod, Stripe, Twilio\\
-        \textbf{Practices}: OOP, REST APIs, Agile Scrum, Git Version Control, Unit \& E2E Testing, ETL Data Pipelines, LLM Integration, Agentic Systems, Prompt Engineering, CI/CD, Database Design, System Design, Docker Containerization\\
+        \sloppy
+        \textbf{Technical Languages}: Python, TypeScript, JavaScript, SQL, Dart, HTML, CSS, C++, Java, Bash\\
+        \textbf{Frameworks \& Libraries}: FastAPI, Flutter, React, Next.js, PyTorch, Hugging Face Transformers, GeoPandas, Shapely, GDAL, rasterio, NetworkX, MapLibre GL, Leaflet, PMTiles, pyproj, PuLP, HiGHS, Node.js, Tailwind CSS, Pandas, Matplotlib, NumPy, Pytest, Vitest, Playwright, OpenCV, Ultralytics YOLO, Google ADK, Pydantic, LangChain, LiveKit, Zod, Stripe, Twilio\\
+        \textbf{Practices}: OOP, REST APIs, Agile Scrum, Git Version Control, Unit \& E2E Testing, ETL Data Pipelines, LLM Integration, Agentic Systems, Prompt Engineering, CI/CD, Database Design, System Design, Docker Containerization, Integer Linear Programming, Semantic Segmentation, Mixed-Precision Training (AMP), Model Evaluation \& Cross-Validation, WebAssembly, Web Workers, Concurrency \& Parallelism, Geospatial Data Processing, CRS \& Projection Handling, Parquet, HTTP Protocol Semantics, AWS (EC2, S3, IAM), Linux\\
         \textbf{Spoken Languages}: English (Native), French (Professional -- CECR DELF B2)
     \end{adjustwidth}
     \section*{\large Experience}
@@ -69,7 +70,11 @@
         \textbf{Software Engineering Intern} \hfill \textbf{May 2026  -- Aug. 2026}\\
         Dendrometric \hfill Montreal, QC
         \begin{itemize}
-            \item Incoming Summer 2026
+            \item Built a geospatial analytics engine in Python and GeoPandas evaluating 286 government timber sales across 23,040 optimizer runs (30 sampling origins $\times$ 4 drone ranges), pairing a set-cover ILP (PuLP/CBC) with a road-network TSP to model a 90\% reduction in required field stops (28,625$\rightarrow$2,839) and 13,257 km of ground-crew walking against a deliberately conservative manual baseline.
+            \item Trained a SegFormer-B2 semantic segmentation model (PyTorch, Hugging Face Transformers) on a self-built 292,968-tile dataset from 236 aerial orthophotos, reaching 0.856 mIoU and 0.943 Cohen's $\kappa$ on a 29,298-tile held-out set at 17.9 ms/tile under a 40:1 class imbalance.
+            \item Ported two Python geospatial pipelines to run entirely client-side in TypeScript and Next.js, swapping GEOS for closed-form analytic geometry and a native ILP solver for HiGHS compiled to WebAssembly, removing any need for backend hosting and verifying sub-centimetre parity with GDAL/pyproj across a 2,594 km road network.
+            \item Built a self-hosted forestry web GIS (Next.js, MapLibre GL) serving 70 data overlays and 115 runtime map layers from 17 PMTiles archives with HTTP Range-aware streaming (206/416, ETag, immutable caching), and engineered the GDAL pipeline converting 1 m lidar DTM, government vectors, and drone orthophotos into web tiles.
+            \item Engineered a fault-tolerant, rate-limited crawler that acquired a 3,777-record government archive of 12,525 documents and 59 GB in a single 5-hour run with zero index failures and 99.97\% download success, using HEAD-sizing and atomic staged renames to prevent truncated files from appearing complete.
         \end{itemize}
         \textbf{Software Engineering Intern} \hfill \textbf{Jan. 2026  -- Apr. 2026}\\
         Biotics Labs \hfill Montreal, QC
